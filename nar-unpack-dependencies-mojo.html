@@ -1,0 +1,570 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>maven-nar-plugin - 
+    nar:nar-unpack-dependencies</title>
+    <style type="text/css" media="all">
+      @import url("./css/maven-base.css");
+      @import url("./css/maven-theme.css");
+      @import url("./css/site.css");
+    </style>
+    <link rel="stylesheet" href="./css/print.css" type="text/css" media="print" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                                                    
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+                                                        
+<script type="text/javascript">_uacct = "UA-140879-1";
+        urchinTracker();</script>
+                    </head>
+  <body class="composite">
+    <div id="banner">
+                  <a href="http://maven-nar.github.com/maven-nar-plugin/" id="bannerLeft">
+    
+                                            <img src="../../images/apache-maven-project-2.png" alt="" />
+    
+            </a>
+                          <span id="bannerRight">
+    
+                                            <img src="../../images/maven-logo-2.gif" alt="" />
+    
+            </span>
+            <div class="clear">
+        <hr/>
+      </div>
+    </div>
+    <div id="breadcrumbs">
+          
+  
+
+  
+    
+            
+  
+    
+            <div class="xleft">
+          
+                <a href="http://www.apache.org/" class="externalLink">Apache</a>
+                &gt;
+      
+                <a href="../../index.html">Maven</a>
+                &gt;
+      
+                <a href="../index.html">Plugins</a>
+                &gt;
+      
+          maven-nar-plugin
+                </div>
+            <div class="xright">            <a href="http://java.freehep.org/maven1.x/freehep-nar-plugin" class="externalLink">NAR Plugin for Maven1</a>
+            |
+                <a href="../../">Maven</a>
+            
+  
+
+  
+    
+            
+  
+    
+            &nbsp;| Last Published: 2013-05-31
+              &nbsp;| Version: 3.0.0-SNAPSHOT
+            </div>
+      <div class="clear">
+        <hr/>
+      </div>
+    </div>
+    <div id="leftColumn">
+      <div id="navcolumn">
+           
+  
+
+  
+    
+            
+  
+    
+                   <h5>Overview</h5>
+            <ul>
+              
+    <li class="none">
+                    <a href="index.html">Introduction</a>
+          </li>
+              
+    <li class="none">
+                    <a href="philosophy.html">Philosophy</a>
+          </li>
+              
+    <li class="none">
+                    <a href="NARPlugin.ppt">Presentation (ppt)</a>
+          </li>
+          </ul>
+              <h5>User Info</h5>
+            <ul>
+              
+    <li class="none">
+                    <a href="plugin-info.html">Goals</a>
+          </li>
+              
+    <li class="none">
+                    <a href="usage.html">Usage</a>
+          </li>
+              
+    <li class="none">
+                    <a href="lifecycle.html">Lifecycle</a>
+          </li>
+              
+    <li class="none">
+                    <a href="configuration.html">Configuration</a>
+          </li>
+              
+    <li class="none">
+                    <a href="faq.html">FAQ</a>
+          </li>
+              
+    <li class="none">
+                    <a href="aol.html">AOL Properties</a>
+          </li>
+              
+    <li class="none">
+                    <a href="examples.html">Examples</a>
+          </li>
+              
+    <li class="none">
+                    <a href="archetypes.html">Archetypes</a>
+          </li>
+              
+    <li class="none">
+                    <a href="compatibility.html">Compatibility</a>
+          </li>
+          </ul>
+              <h5>Developer Info</h5>
+            <ul>
+              
+    <li class="none">
+                    <a href="narDependencies.html">NAR Dependencies</a>
+          </li>
+              
+    <li class="none">
+                    <a href="https://github.com/maven-nar/maven-nar-plugin/issues" class="externalLink">Bug Reports</a>
+          </li>
+              
+    <li class="none">
+                    <a href="https://groups.google.com/forum/?fromgroups#!forum/maven-nar" class="externalLink">Forum</a>
+          </li>
+              
+    <li class="none">
+                    <a href="apidocs/index.html">APIDocs</a>
+          </li>
+              
+    <li class="none">
+                    <a href="narLibrary.html">NAR Library</a>
+          </li>
+              
+    <li class="none">
+                    <a href="cpptasks.html">CPPTasks</a>
+          </li>
+              
+    <li class="none">
+                    <a href="http://github.com/maven-nar/maven-nar-plugin" class="externalLink">Git Browse nar-plugin</a>
+          </li>
+              
+    <li class="none">
+                    <a href="http://github.com/maven-nar/cpptasks-parallel" class="externalLink">Git Browse cpptasks</a>
+          </li>
+              
+    <li class="none">
+                    <a href="source-repository.html">Git Repository</a>
+          </li>
+          </ul>
+              <h5>Other Information</h5>
+            <ul>
+              
+    <li class="none">
+                    <a href="http://docs.codehaus.org/display/MAVEN/Support+for+other+languages" class="externalLink">Maven and other languages</a>
+          </li>
+          </ul>
+                        <h5>Project Documentation</h5>
+            <ul>
+              
+                
+              
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+              
+        <li class="collapsed">
+                    <a href="project-info.html">Project Information</a>
+                </li>
+              
+                
+              
+      
+            
+      
+            
+      
+            
+      
+            
+      
+              
+        <li class="collapsed">
+                    <a href="project-reports.html">Project Reports</a>
+                </li>
+          </ul>
+              <h5>Maven Projects</h5>
+            <ul>
+              
+    <li class="none">
+                    <a href="../../ant-tasks/index.html">Ant Tasks</a>
+          </li>
+              
+    <li class="none">
+                    <a href="../../doxia/index.html">Doxia</a>
+          </li>
+              
+    <li class="none">
+                    <a href="../../jxr/index.html">JXR</a>
+          </li>
+              
+    <li class="none">
+                    <a href="../../maven-1.x/index.html">Maven 1.x</a>
+          </li>
+              
+    <li class="none">
+                    <a href="../../index.html">Maven 2</a>
+          </li>
+              
+    <li class="none">
+                    <a href="../../mercury/index.html">Mercury</a>
+          </li>
+              
+    <li class="none">
+                    <a href="../index.html">Plugins</a>
+          </li>
+              
+    <li class="none">
+                    <a href="../../scm/index.html">SCM</a>
+          </li>
+              
+    <li class="none">
+                    <a href="../../shared/index.html">Shared Components</a>
+          </li>
+              
+    <li class="none">
+                    <a href="../../surefire/index.html">Surefire</a>
+          </li>
+              
+    <li class="none">
+                    <a href="../../wagon/index.html">Wagon</a>
+          </li>
+          </ul>
+                                           <a href="http://maven.apache.org/" title="Built by Maven" class="poweredBy">
+            <img alt="Built by Maven" src="./images/logos/maven-feather.png"></img>
+          </a>
+                       
+  
+
+  
+    
+            
+  
+    
+        </div>
+    </div>
+    <div id="bodyColumn">
+      <div id="contentBox">
+        
+  
+    <div class="section"><h2>nar:nar-unpack-dependencies<a name="nar:nar-unpack-dependencies"></a></h2>
+      <p><b>Full name</b>:</p>
+      <p>org.apache.maven.plugins:nar-maven-plugin:3.0.0-SNAPSHOT:nar-unpack-dependencies</p>
+      <p><b>Description</b>:</p>
+      <div>Goal that unpacks the project dependencies from the repository to a
+defined location. Unpacking happens in the local repository, and
+also sets flags on binaries and corrects static libraries.</div>
+      <p><b>Attributes</b>:</p>
+      <ul>
+        <li>Requires a Maven 2.0 project to be executed.</li>
+        <li>Requires dependency resolution of artifacts in scope: <tt>test</tt>.</li>
+        <li>Binds by default to the lifecycle phase: <tt>process-test-sources</tt>.</li>
+      </ul>
+      <div class="section"><h3>Required Parameters<a name="Required_Parameters"></a></h3>
+        <table class="bodyTable" border="0" align="left">
+          <tr class="a">
+            <th>Name</th>
+            <th>Type</th>
+            <th>Since</th>
+            <th>Description</th>
+          </tr>
+          <tr class="b">
+            <td><b><a href="#architecture">architecture</a></b></td>
+            <td><tt>String</tt></td>
+            <td><tt>-</tt></td>
+            <td>The Architecture for the nar, Some choices are: &quot;x86&quot;, &quot;i386&quot;,
+&quot;amd64&quot;, &quot;ppc&quot;, &quot;sparc&quot;, ... Defaults to a derived value from
+${os.arch}<br /></td>
+          </tr>
+          <tr class="a">
+            <td><b><a href="#layout">layout</a></b></td>
+            <td><tt>String</tt></td>
+            <td><tt>-</tt></td>
+            <td>Layout to be used for building and unpacking artifacts<br /><b>Default value is</b>: <tt>org.apache.maven.plugin.nar.NarLayout21</tt>.</td>
+          </tr>
+        </table>
+      </div>
+      <div class="section"><h3>Optional Parameters<a name="Optional_Parameters"></a></h3>
+        <table class="bodyTable" border="0" align="left">
+          <tr class="a">
+            <th>Name</th>
+            <th>Type</th>
+            <th>Since</th>
+            <th>Description</th>
+          </tr>
+          <tr class="b">
+            <td><b><a href="#aol">aol</a></b></td>
+            <td><tt>String</tt></td>
+            <td><tt>-</tt></td>
+            <td>Architecture-OS-Linker name. Defaults to: arch-os-linker.<br /></td>
+          </tr>
+          <tr class="a">
+            <td><b><a href="#classifiers">classifiers</a></b></td>
+            <td><tt>List</tt></td>
+            <td><tt>-</tt></td>
+            <td>List of classifiers which you want download/unpack/assemble Example
+ppc-MacOSX-g++, x86-Windows-msvc, i386-Linux-g++. Not setting means
+all.<br /></td>
+          </tr>
+          <tr class="b">
+            <td><b><a href="#ignore">ignore</a></b></td>
+            <td><tt>boolean</tt></td>
+            <td><tt>-</tt></td>
+            <td>Ignore errors and failures.<br /><b>Default value is</b>: <tt>false</tt>.</td>
+          </tr>
+          <tr class="a">
+            <td><b><a href="#javah">javah</a></b></td>
+            <td><tt>Javah</tt></td>
+            <td><tt>-</tt></td>
+            <td>Javah info<br /></td>
+          </tr>
+          <tr class="b">
+            <td><b><a href="#libraries">libraries</a></b></td>
+            <td><tt>List</tt></td>
+            <td><tt>-</tt></td>
+            <td>List of libraries to create<br /></td>
+          </tr>
+          <tr class="a">
+            <td><b><a href="#linker">linker</a></b></td>
+            <td><tt>Linker</tt></td>
+            <td><tt>-</tt></td>
+            <td>Linker<br /></td>
+          </tr>
+          <tr class="b">
+            <td><b><a href="#os">os</a></b></td>
+            <td><tt>String</tt></td>
+            <td><tt>-</tt></td>
+            <td>The Operating System for the nar. Some choices are: &quot;Windows&quot;,
+&quot;Linux&quot;, &quot;MacOSX&quot;, &quot;SunOS&quot;, ... Defaults to a derived value from
+${os.name} FIXME table missing<br /></td>
+          </tr>
+          <tr class="a">
+            <td><b><a href="#output">output</a></b></td>
+            <td><tt>String</tt></td>
+            <td><tt>-</tt></td>
+            <td>Name of the output - for jni default to
+expression=&quot;${project.artifactId}-${project.version}&quot; - for libs
+default to expression=&quot;${project.artifactId}-${project.version}&quot; -
+for exe default to expression=&quot;${project.artifactId}&quot; -- for tests
+default to expression=&quot;${test.name}&quot;<br /></td>
+          </tr>
+          <tr class="b">
+            <td><b><a href="#skip">skip</a></b></td>
+            <td><tt>boolean</tt></td>
+            <td><tt>-</tt></td>
+            <td>Skip running of NAR plugins (any) altogether.<br /><b>Default value is</b>: <tt>false</tt>.</td>
+          </tr>
+          <tr class="a">
+            <td><b><a href="#targetDirectory">targetDirectory</a></b></td>
+            <td><tt>File</tt></td>
+            <td><tt>-</tt></td>
+            <td>Target directory for Nar file construction. Defaults to
+&quot;${project.build.directory}/nar&quot; for &quot;nar-compile&quot; goal<br /></td>
+          </tr>
+          <tr class="b">
+            <td><b><a href="#testTargetDirectory">testTargetDirectory</a></b></td>
+            <td><tt>File</tt></td>
+            <td><tt>-</tt></td>
+            <td>Target directory for Nar test construction. Defaults to
+&quot;${project.build.directory}/test-nar&quot; for &quot;nar-testCompile&quot; goal<br /></td>
+          </tr>
+          <tr class="a">
+            <td><b><a href="#testUnpackDirectory">testUnpackDirectory</a></b></td>
+            <td><tt>File</tt></td>
+            <td><tt>-</tt></td>
+            <td>Target directory for Nar test unpacking. Defaults to
+&quot;${testTargetDirectory}&quot;<br /></td>
+          </tr>
+          <tr class="b">
+            <td><b><a href="#unpackDirectory">unpackDirectory</a></b></td>
+            <td><tt>File</tt></td>
+            <td><tt>-</tt></td>
+            <td>Target directory for Nar file unpacking. Defaults to
+&quot;${targetDirectory}&quot;<br /></td>
+          </tr>
+        </table>
+      </div>
+      <div class="section"><h3>Parameter Details<a name="Parameter_Details"></a></h3>
+        <p><b><a name="aol">aol</a>:</b></p>
+        <div>Architecture-OS-Linker name. Defaults to: arch-os-linker.</div>
+        <ul>
+          <li><b>Type</b>: <tt>java.lang.String</tt></li>
+          <li><b>Required</b>: <tt>No</tt></li>
+        </ul><hr /><p><b><a name="architecture">architecture</a>:</b></p>
+        <div>The Architecture for the nar, Some choices are: &quot;x86&quot;, &quot;i386&quot;,
+&quot;amd64&quot;, &quot;ppc&quot;, &quot;sparc&quot;, ... Defaults to a derived value from
+${os.arch}</div>
+        <ul>
+          <li><b>Type</b>: <tt>java.lang.String</tt></li>
+          <li><b>Required</b>: <tt>Yes</tt></li>
+          <li><b>Expression</b>: <tt>${os.arch}</tt></li>
+        </ul><hr /><p><b><a name="classifiers">classifiers</a>:</b></p>
+        <div>List of classifiers which you want download/unpack/assemble Example
+ppc-MacOSX-g++, x86-Windows-msvc, i386-Linux-g++. Not setting means
+all.</div>
+        <ul>
+          <li><b>Type</b>: <tt>java.util.List</tt></li>
+          <li><b>Required</b>: <tt>No</tt></li>
+        </ul><hr /><p><b><a name="ignore">ignore</a>:</b></p>
+        <div>Ignore errors and failures.</div>
+        <ul>
+          <li><b>Type</b>: <tt>boolean</tt></li>
+          <li><b>Required</b>: <tt>No</tt></li>
+          <li><b>Expression</b>: <tt>${nar.ignore}</tt></li>
+          <li><b>Default</b>: <tt>false</tt></li>
+        </ul><hr /><p><b><a name="javah">javah</a>:</b></p>
+        <div>Javah info</div>
+        <ul>
+          <li><b>Type</b>: <tt>org.apache.maven.plugin.nar.Javah</tt></li>
+          <li><b>Required</b>: <tt>No</tt></li>
+        </ul><hr /><p><b><a name="layout">layout</a>:</b></p>
+        <div>Layout to be used for building and unpacking artifacts</div>
+        <ul>
+          <li><b>Type</b>: <tt>java.lang.String</tt></li>
+          <li><b>Required</b>: <tt>Yes</tt></li>
+          <li><b>Expression</b>: <tt>${nar.layout}</tt></li>
+          <li><b>Default</b>: <tt>org.apache.maven.plugin.nar.NarLayout21</tt></li>
+        </ul><hr /><p><b><a name="libraries">libraries</a>:</b></p>
+        <div>List of libraries to create</div>
+        <ul>
+          <li><b>Type</b>: <tt>java.util.List</tt></li>
+          <li><b>Required</b>: <tt>No</tt></li>
+        </ul><hr /><p><b><a name="linker">linker</a>:</b></p>
+        <div>Linker</div>
+        <ul>
+          <li><b>Type</b>: <tt>org.apache.maven.plugin.nar.Linker</tt></li>
+          <li><b>Required</b>: <tt>No</tt></li>
+        </ul><hr /><p><b><a name="os">os</a>:</b></p>
+        <div>The Operating System for the nar. Some choices are: &quot;Windows&quot;,
+&quot;Linux&quot;, &quot;MacOSX&quot;, &quot;SunOS&quot;, ... Defaults to a derived value from
+${os.name} FIXME table missing</div>
+        <ul>
+          <li><b>Type</b>: <tt>java.lang.String</tt></li>
+          <li><b>Required</b>: <tt>No</tt></li>
+        </ul><hr /><p><b><a name="output">output</a>:</b></p>
+        <div>Name of the output - for jni default to
+expression=&quot;${project.artifactId}-${project.version}&quot; - for libs
+default to expression=&quot;${project.artifactId}-${project.version}&quot; -
+for exe default to expression=&quot;${project.artifactId}&quot; -- for tests
+default to expression=&quot;${test.name}&quot;</div>
+        <ul>
+          <li><b>Type</b>: <tt>java.lang.String</tt></li>
+          <li><b>Required</b>: <tt>No</tt></li>
+        </ul><hr /><p><b><a name="skip">skip</a>:</b></p>
+        <div>Skip running of NAR plugins (any) altogether.</div>
+        <ul>
+          <li><b>Type</b>: <tt>boolean</tt></li>
+          <li><b>Required</b>: <tt>No</tt></li>
+          <li><b>Expression</b>: <tt>${nar.skip}</tt></li>
+          <li><b>Default</b>: <tt>false</tt></li>
+        </ul><hr /><p><b><a name="targetDirectory">targetDirectory</a>:</b></p>
+        <div>Target directory for Nar file construction. Defaults to
+&quot;${project.build.directory}/nar&quot; for &quot;nar-compile&quot; goal</div>
+        <ul>
+          <li><b>Type</b>: <tt>java.io.File</tt></li>
+          <li><b>Required</b>: <tt>No</tt></li>
+        </ul><hr /><p><b><a name="testTargetDirectory">testTargetDirectory</a>:</b></p>
+        <div>Target directory for Nar test construction. Defaults to
+&quot;${project.build.directory}/test-nar&quot; for &quot;nar-testCompile&quot; goal</div>
+        <ul>
+          <li><b>Type</b>: <tt>java.io.File</tt></li>
+          <li><b>Required</b>: <tt>No</tt></li>
+        </ul><hr /><p><b><a name="testUnpackDirectory">testUnpackDirectory</a>:</b></p>
+        <div>Target directory for Nar test unpacking. Defaults to
+&quot;${testTargetDirectory}&quot;</div>
+        <ul>
+          <li><b>Type</b>: <tt>java.io.File</tt></li>
+          <li><b>Required</b>: <tt>No</tt></li>
+        </ul><hr /><p><b><a name="unpackDirectory">unpackDirectory</a>:</b></p>
+        <div>Target directory for Nar file unpacking. Defaults to
+&quot;${targetDirectory}&quot;</div>
+        <ul>
+          <li><b>Type</b>: <tt>java.io.File</tt></li>
+          <li><b>Required</b>: <tt>No</tt></li>
+        </ul>
+      </div>
+    </div>
+  
+
+      </div>
+    </div>
+    <div class="clear">
+      <hr/>
+    </div>
+    <div id="footer">
+      <div class="xright">&#169;  
+          2002-2013
+    
+          The Apache Software Foundation
+          
+  
+
+  
+    
+            
+  
+    
+   - <a href="http://maven.apache.org/privacy-policy.html">Privacy Policy</a></div>
+      <div class="clear">
+        <hr/>
+      </div>
+    </div>
+  </body>
+</html>
